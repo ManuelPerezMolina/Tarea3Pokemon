@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fr_guia3"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/blue_transparente"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/saltoguia3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:text="@string/saltar_guia"
+            android:textColor="@color/green_transparente" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="127dp"
+            android:background="@drawable/globo"
+            android:fontFamily="@font/showg"
+            android:gravity="center"
+            android:text="@string/text3" />
+
+        <ImageView
+            android:id="@+id/marca3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="311dp"
+            android:layout_marginBottom="-20dp"
+            android:src="@drawable/marcador" />
+
+        <ImageView
+            android:layout_width="77dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="274dp"
+            android:layout_marginBottom="69dp"
+            android:src="@drawable/arrow" />
+
+        <Button
+            android:id="@+id/bsig3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="325dp"
+            android:layout_marginEnd="13dp"
+            android:text="@string/siguiente"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
