@@ -18,9 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dam.pmdm.spyrothedragon.R;
-import dam.pmdm.spyrothedragon.models.Character;
 import dam.pmdm.spyrothedragon.adapters.CharactersAdapter;
 import dam.pmdm.spyrothedragon.databinding.FragmentCharactersBinding;
+import dam.pmdm.spyrothedragon.models.Character;
 
 
 public class CharactersFragment extends Fragment {

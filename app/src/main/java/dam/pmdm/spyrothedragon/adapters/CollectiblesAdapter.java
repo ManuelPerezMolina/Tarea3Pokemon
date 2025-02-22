@@ -6,16 +6,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import dam.pmdm.spyrothedragon.MainActivity;
 import dam.pmdm.spyrothedragon.R;
 import dam.pmdm.spyrothedragon.models.Collectible;
 
 public class CollectiblesAdapter extends RecyclerView.Adapter<CollectiblesAdapter.CollectiblesViewHolder> {
 
     private List<Collectible> list;
+    private BindingAdapter bindingAdapter;
 
     public CollectiblesAdapter(List<Collectible> collectibleList) {
         this.list = collectibleList;
@@ -49,8 +52,21 @@ public class CollectiblesAdapter extends RecyclerView.Adapter<CollectiblesAdapte
 
         public CollectiblesViewHolder(View itemView) {
             super(itemView);
+            final int[] nclick = {0};
+            itemView.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                nclick[0] = nclick[0] + 1;
+                                                if (nclick[0] == 4) {
+                                                    MainActivity mainActivity = (MainActivity) v.getContext();
+                                                    mainActivity.verVideo();
+                                                };
+                                            }
+                                        });
             nameTextView = itemView.findViewById(R.id.name);
             imageImageView = itemView.findViewById(R.id.image);
         }
     }
+
+
 }

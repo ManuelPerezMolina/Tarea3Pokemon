@@ -4,6 +4,24 @@
     <string name="characters">Personajes</string>
     <string name="collectibles">Coleccionables</string>
     <string name="title_about">Acerca de</string>
-    <string name="text_about">Aplicación desarrollada por \n <b>Lindsay Barrero Martínez.</b></string>
+    <string name="text_about">Aplicación desarrollada por \n <b>Manuel Pérez Molina.</b></string>
     <string name="accept">Aceptar</string>
+    <string name="text_bienvenida_1">Si crees que estas preparado para entrar en el mundo mágico de</string>
+    <string name="text_bienvenida_2">Intentaremos ayudarte en este viaje\ndandote unas nociones de funcionamiento
+        \nde las pestañas\n\n¿listo para empezar?\n\nPulsa en Comenzar</string>
+    <string name="comenzar">COMENZAR</string>
+    <string name="saltar_guia">Saltar Guia</string>
+    <string name="text1">\n\nAquí podrás explorar a todos los personajes del mundo de Spyro.\n\n</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="text2">\n\n\nAQUÍ PODRAS EXPLORAR TODOS LOS MUNDOS DEL UNIVERSO DE SPYRO.\n\n\n</string>
+    <string name="text3">\n\n\nAQUÍ PODRAS EXPLORAR TODOS LOS COLECCIONABLES DEL UNIVERSO DE SPYRO.\n\n\n</string>
+    <string name="text4">\nPULSE EN \nINFORMACIÓN PARA \nVER ACERCA DE...\n</string>
+    <string name="titulo">**CON NUESTRA GUIA HEMOS VISTO**</string>
+    <string name="paso1">- tab de personajes</string>
+    <string name="paso2">- tab de mundos</string>
+    <string name="paso3">- tab de coleccionables</string>
+    <string name="paso4">- información</string>
+    <string name="btfinal">PULSE EL HUEVO PARA FINALIZAR LA GUIA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

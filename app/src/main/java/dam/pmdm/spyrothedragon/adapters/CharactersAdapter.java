@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
+import dam.pmdm.spyrothedragon.MainActivity;
 import dam.pmdm.spyrothedragon.R;
 import dam.pmdm.spyrothedragon.models.Character;
-
-import java.util.List;
 
 public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.CharactersViewHolder> {
 
@@ -51,6 +52,19 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Ch
             super(itemView);
             nameTextView = itemView.findViewById(R.id.name);
             imageImageView = itemView.findViewById(R.id.image);
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if (nameTextView.getText().equals("Spyro")) {
+                        System.out.println("Click largo");
+                        System.out.println(nameTextView.getText());
+                        MainActivity mainActivity = (MainActivity) v.getContext();
+                        mainActivity.dibujo();
+                        return false;
+                    }
+                    return false;
+                }
+            });
         }
     }
 }
