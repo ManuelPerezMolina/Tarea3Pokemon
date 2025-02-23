@@ -1,5 +1,6 @@
 # GUIA DE FUNCIONAMIENTO APP POKEMON
 ## Introduccion
+
 Hemos realizado una guia superpuesta a la app clonada,en ella, damos una breve explicación de cada una de las pantallas de dicha app, así como del menu información. Tambien hemos añadido unos easter eggs, uno de video y otro de animación, que se puede activar realizando una serie de pasos que indicaremos después en la explicación del uso de la guia.
 Tambien hemos creado una pantalla de bienvenida que nos introduce en la app.
 La app nos presenta tres pantallas relacionadas con el mundo de Spyro (**Personajes, Mundos y Coleccionables**).
@@ -46,4 +47,64 @@ new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 }
             }, 7000);
 ```
+
+VideoView para ver el video que hemos añadido como easter eggs.
+
+```
+
+VideoView videov = fragmentVideoBinding.video;
+        videov.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.videospyro);
+        videov.start();
+
+```
+
+Para el dibujo de otro easter egg, hemos utilizado canvas y animator.
+
+```
+public void onDraw(Canvas canvas) {
+
+        Paint paint = new Paint();
+        Paint paint2 = new Paint();
+        paint.setARGB(255, 255, 0, 0);
+        paint2.setARGB(255, 255, 255, 0);
+        for (int i = 0; i < 100; i++) {
+            ValueAnimator animator = ValueAnimator.ofInt(0, 100);
+            animator.setDuration(4000);
+            animator.addUpdateListener(animation -> {
+                int value = (int) animation.getAnimatedValue();
+                canvas.drawCircle(280,300,value,paint);
+                canvas.drawCircle(280,300,value-10,paint2);
+            });
+            animator.start();
+            invalidate();
+        }
+
+        super.onDraw(canvas);
+    }
+ ```
+
+Tambien he creado varias animaciones, guardadas en res/anim, que se han utilizado en los bocadillos de información de la guia.
+
+```
+<rotate
+<alpha
+<translate
+<scale
+```
+
+## Intrucciones de funcionamiento de la guia
+
+La app comienza con una pantalla de bienvenida, y da paso a la aplicación al pulsar **COMENZAR**.
+La guia se abre cada vez que iniciamos la app, hasta que se vea completa, a partir de ese momento ya no aparecerá.
+Se puede saltar en cualquier momento pulsando sobre **SALTAR GUIA**, pero volvera a salir la siguiente vez que se abra la app.
+En cada pantalla de la guía aparece un botón **SIGUIENTE**, a los segundos de abrirse dicha pantalla.
+Las pantallas de la guía son transparentes y podemos ver la pantalla de la app, a la que hace referencia la guia.
+
+## Clonar Repositorio
+
+[Repositorio PokedexMPM](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository)
+  Seguir los pasos indicados en el docs de github.
+
+## Conclusión del desarrollador
+
 
