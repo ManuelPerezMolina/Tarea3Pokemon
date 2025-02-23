@@ -5,6 +5,7 @@ Tambien hemos creado una pantalla de bienvenida que nos introduce en la app.
 La app nos presenta tres pantallas relacionadas con el mundo de Spyro (**Personajes, Mundos y Coleccionables**).
 
 ## Caracteristicas Principales
+
 la app consta de 3 pantallas principales mas la pantalla de bienvenida.
 
 |Pantalla Bienvenida|Pantalla Personajes|Pantalla Mundos|Pantalla Coleccionables|
@@ -22,3 +23,27 @@ La guia que hemos realizado presenta las siguientes pantallas
 |<img src="https://github.com/user-attachments/assets/9a91e5c0-49f0-46cb-9118-9d9a848c6921" alt="Guia Personajes" width="200" height="300">|<img src="https://github.com/user-attachments/assets/19037aaa-7136-4380-9f04-fb49152226f7" alt="Guia Mundos" width="200" height="300">|<img src="https://github.com/user-attachments/assets/526bb721-b9ff-4ec7-a5c1-f1740e3c2c2f" alt="Guia Coleccionables" width="200" height="300">|<img src="https://github.com/user-attachments/assets/07fa434f-48dc-452b-998e-ddf3fd491054" alt="Guia Coleccionables" width="200" height="300">|<img src="https://github.com/user-attachments/assets/d09883e8-d97e-4512-9245-655dbcb895c4" alt="Guia Coleccionables" width="200" height="300">
 
 Hemos añadido dos easter eggs, que se activaran realizando una serie de pasos que indicaremos después en la explicación del uso de la guia.
+
+## Tecnologias Utilizadas.
+
+La principal tecnologia que hemos utilizado es 
+
+```
+ <include> </include> 
+```
+
+con estas etiquetas hacemos posible ver fragment sobre los fragment de la app, y de esta forma ver la guia sobre las pantallas.
+
+Hemos utilizado animaciones para los bocadillos de la guia.
+
+Para que aparezca el boton siguiente en los fragment de la guia utilizamos el siguiente codigo que esperar un tiempo antes de que se realize la accion que indicamos
+
+```
+new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    fragmentGuia2Binding.bsig2.setVisibility(View.VISIBLE);
+                }
+            }, 7000);
+```
+
