@@ -2,7 +2,6 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -38,31 +37,31 @@
 
     <include
         android:id="@+id/fd"
-        layout="@layout/fragment_dibujo"/>
+        layout="@layout/fragment_dibujo" />
 
     <include
         android:id="@+id/fg"
-        layout="@layout/fragment_guia"/>
+        layout="@layout/fragment_guia" />
 
     <include
         android:id="@+id/fg2"
-        layout="@layout/fragment_guia2"/>
+        layout="@layout/fragment_guia2" />
 
     <include
         android:id="@+id/fg3"
-        layout="@layout/fragment_guia3"/>
+        layout="@layout/fragment_guia3" />
 
     <include
         android:id="@+id/fg4"
-        layout="@layout/fragment_guia4"/>
+        layout="@layout/fragment_guia4" />
 
     <include
         android:id="@+id/fg5"
-        layout="@layout/fragment_guia5"/>
+        layout="@layout/fragment_guia5" />
 
     <include
         android:id="@+id/fv"
-        layout="@layout/fragment_video"/>
+        layout="@layout/fragment_video" />
 
 
 </RelativeLayout>

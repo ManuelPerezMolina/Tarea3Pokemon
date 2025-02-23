@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 public class Fuego extends View {
 
 
-
     public Fuego(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
@@ -29,8 +28,8 @@ public class Fuego extends View {
             animator.setDuration(4000);
             animator.addUpdateListener(animation -> {
                 int value = (int) animation.getAnimatedValue();
-                canvas.drawCircle(280,300,value,paint);
-                canvas.drawCircle(280,300,value-10,paint2);
+                canvas.drawCircle(280, 300, value, paint);
+                canvas.drawCircle(280, 300, value - 10, paint2);
             });
             animator.start();
             invalidate();

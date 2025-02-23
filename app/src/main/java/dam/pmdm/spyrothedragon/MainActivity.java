@@ -1,14 +1,8 @@
 package dam.pmdm.spyrothedragon;
 
-import static android.opengl.ETC1.getHeight;
-import static android.opengl.ETC1.getWidth;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,9 +35,9 @@ import dam.pmdm.spyrothedragon.databinding.FragmentVideoBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
     NavController navController = null;
-    private Boolean verGuia,GuiaCompleta;
+    private ActivityMainBinding binding;
+    private Boolean verGuia, GuiaCompleta;
     private FragmentGuiaBinding fragmentGuiaBinding;
     private FragmentGuia2Binding fragmentGuia2Binding;
     private FragmentGuia3Binding fragmentGuia3Binding;
@@ -51,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentGuia5Binding fragmentGuia5Binding;
     private FragmentVideoBinding fragmentVideoBinding;
     private FragmentDibujoBinding fragmentDibujoBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     destination.getId() == R.id.navigation_collectibles) {
                 // Para las pantallas de los tabs, no queremos que aparezca la flecha de atrás
                 getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-            }
-            else {
+            } else {
                 // Si se navega a una pantalla donde se desea mostrar la flecha de atrás, habilítala
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
@@ -99,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void mostrarGuia() {
 
-        fragmentGuiaBinding=binding.fg;
+        fragmentGuiaBinding = binding.fg;
 
         fragmentGuiaBinding.saltoguia.setOnClickListener(v -> {
             fragmentGuiaBinding.frGuia.setVisibility(View.GONE);
@@ -133,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     private void mostrarGuia2() {
 
         navController.navigate(R.id.navigation_worlds);
-        fragmentGuia2Binding=binding.fg2;
+        fragmentGuia2Binding = binding.fg2;
         fragmentGuiaBinding.frGuia.setVisibility(View.GONE);
 
         fragmentGuia2Binding.saltoguia2.setOnClickListener(v -> {
@@ -170,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
     private void mostrarGuia3() {
 
         navController.navigate(R.id.navigation_collectibles);
-        fragmentGuia3Binding=binding.fg3;
+        fragmentGuia3Binding = binding.fg3;
         fragmentGuiaBinding.frGuia.setVisibility(View.GONE);
         fragmentGuia2Binding.frGuia2.setVisibility(View.GONE);
 
@@ -207,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
     private void mostrarGuia4() {
 
         navController.navigate(R.id.navigation_collectibles);
-        fragmentGuia4Binding=binding.fg4;
+        fragmentGuia4Binding = binding.fg4;
         fragmentGuiaBinding.frGuia.setVisibility(View.GONE);
         fragmentGuia2Binding.frGuia2.setVisibility(View.GONE);
         fragmentGuia3Binding.frGuia3.setVisibility(View.GONE);
@@ -269,31 +263,52 @@ public class MainActivity extends AppCompatActivity {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.frog2);
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.tv.setVisibility(View.VISIBLE);}}, 2000);
+                public void run() {
+                    fragmentGuia5Binding.tv.setVisibility(View.VISIBLE);
+                }
+            }, 2000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.tv1.setVisibility(View.VISIBLE);}}, 4000);
+                public void run() {
+                    fragmentGuia5Binding.tv1.setVisibility(View.VISIBLE);
+                }
+            }, 4000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.tv2.setVisibility(View.VISIBLE);}}, 6000);
+                public void run() {
+                    fragmentGuia5Binding.tv2.setVisibility(View.VISIBLE);
+                }
+            }, 6000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.tv3.setVisibility(View.VISIBLE);}}, 8000);
+                public void run() {
+                    fragmentGuia5Binding.tv3.setVisibility(View.VISIBLE);
+                }
+            }, 8000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.tv4.setVisibility(View.VISIBLE);}}, 10000);
+                public void run() {
+                    fragmentGuia5Binding.tv4.setVisibility(View.VISIBLE);
+                }
+            }, 10000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.btfinal.setVisibility(View.VISIBLE);}}, 12000);
+                public void run() {
+                    fragmentGuia5Binding.btfinal.setVisibility(View.VISIBLE);
+                }
+            }, 12000);
             mp.start();
             new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                 @Override
-                public void run() {fragmentGuia5Binding.huevo.setVisibility(View.VISIBLE);}}, 14000);
+                public void run() {
+                    fragmentGuia5Binding.huevo.setVisibility(View.VISIBLE);
+                }
+            }, 14000);
             mp.start();
         } else {
             fragmentGuia5Binding.frGuia5.setVisibility(verGuia ? View.VISIBLE : View.GONE);
@@ -305,8 +320,7 @@ public class MainActivity extends AppCompatActivity {
         verGuia = sharedPreferences.getBoolean("Guia", true);
         if (menuItem.getItemId() == R.id.nav_characters)
             navController.navigate(R.id.navigation_characters);
-        else
-        if (menuItem.getItemId() == R.id.nav_worlds)
+        else if (menuItem.getItemId() == R.id.nav_worlds)
             navController.navigate(R.id.navigation_worlds);
         else
             navController.navigate(R.id.navigation_collectibles);
@@ -342,10 +356,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void verVideo() {
-        fragmentVideoBinding=binding.fv;
+        fragmentVideoBinding = binding.fv;
         fragmentVideoBinding.frv.setVisibility(View.VISIBLE);
         VideoView videov = fragmentVideoBinding.video;
-        videov.setVideoPath("android.resource://"+getPackageName()+"/"+R.raw.videospyro);
+        videov.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.videospyro);
         videov.start();
         videov.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override

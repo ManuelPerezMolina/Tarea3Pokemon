@@ -27,10 +27,9 @@ public class video extends Fragment {
 
         System.out.println("OnCreate Video");
 
-        VideoView videov=view.findViewById(R.id.video);
-        videov.setVideoPath("android.resource://"+getActivity().getPackageName()+"/"+R.raw.videospyro);
+        VideoView videov = view.findViewById(R.id.video);
+        videov.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.videospyro);
         videov.start();
-
 
 
         return view;
@@ -42,7 +41,7 @@ public class video extends Fragment {
         System.out.println("OnResume Video");
 
         VideoView videov = getActivity().findViewById(R.id.video);
-        videov.setVideoPath("android.resource://"+getActivity().getPackageName()+"/"+R.raw.videospyro);
+        videov.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.videospyro);
         videov.start();
     }
 }

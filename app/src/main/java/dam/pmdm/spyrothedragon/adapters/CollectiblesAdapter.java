@@ -54,15 +54,16 @@ public class CollectiblesAdapter extends RecyclerView.Adapter<CollectiblesAdapte
             super(itemView);
             final int[] nclick = {0};
             itemView.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View v) {
-                                                nclick[0] = nclick[0] + 1;
-                                                if (nclick[0] == 4) {
-                                                    MainActivity mainActivity = (MainActivity) v.getContext();
-                                                    mainActivity.verVideo();
-                                                };
-                                            }
-                                        });
+                @Override
+                public void onClick(View v) {
+                    nclick[0] = nclick[0] + 1;
+                    if (nclick[0] == 4) {
+                        MainActivity mainActivity = (MainActivity) v.getContext();
+                        mainActivity.verVideo();
+                    }
+                    ;
+                }
+            });
             nameTextView = itemView.findViewById(R.id.name);
             imageImageView = itemView.findViewById(R.id.image);
         }
