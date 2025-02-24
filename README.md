@@ -107,4 +107,5 @@ Las pantallas de la guía son transparentes y podemos ver la pantalla de la app,
 
 ## Conclusión del desarrollador
 
-
+Esta practica ha sido interesante para ver como interactuar con varios fragment a la vez, también he visto productivo, actualizar una app ya existente añadiendole nuevas funcionalidades sin que pierda el funcionamiento de dicha app.
+Me ha parecido bastante util el realizar los easter eggs, ya que es algo que no añade funcionalidad a la app, pero mejora bastante la experiencia de usuario.
